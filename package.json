@@ -1,6 +1,6 @@
 {
     "name": "@metrixorg/cordova-metrix",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Metrix SDK plugin for Cordova",
     "author": "Metrix",
     "license": "Apache 2.0 License",
