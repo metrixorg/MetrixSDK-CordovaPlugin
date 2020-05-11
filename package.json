@@ -1,0 +1,37 @@
+{
+    "name": "@metrixorg/cordova-metrix",
+    "version": "0.1.0",
+    "description": "Metrix SDK plugin for Cordova",
+    "author": "Metrix",
+    "license": "Apache 2.0 License",
+    "platforms": [
+        "android"
+    ],
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=3.0.0"
+        },
+        {
+            "name": "cordova-ios",
+            "version": ">=3.0.0"
+        },
+        {
+            "name": "cordova-android",
+            "version": ">=4.0.0"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/metrixorg/MetrixSDK-CordovaPlugin.git"
+    },
+    "keywords": [
+        "metrix",
+        "analytics",
+        "ecosystem:cordova"
+    ],
+    "bugs": {
+        "url": "https://github.com/metrixorg/MetrixSDK-CordovaPlugin/issues"
+    },
+    "homepage": "https://metrix.ir"
+}

@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="ir.metrix.sdk" version="0.1.0" >
+    <name>Metrix</name>
+    <description>Metrix SDK plugin for Cordova</description>
+    <author>Metrix</author>
+    <license>Apache 2.0 License</license>
+    <engines>
+        <engine name="cordova-android" version=">=4.0.0" />
+        <!--        <engine name="cordova-ios" version=">=3.0.0" />-->
+    </engines>
+    <keywords>cordova, android, metrix, analytics</keywords>
+    <repo>https://github.com/metrixorg/MetrixSDK-CordovaPlugin.git</repo>
+    <issue>https://github.com/metrixorg/MetrixSDK-CordovaPlugin/issues</issue>
+
+    <js-module src="www/metrix.js" name="Metrix">
+        <clobbers target="Metrix" />
+    </js-module>
+    <js-module src="www/metrix_config.js" name="MetrixConfig">
+        <clobbers target="MetrixConfig" />
+    </js-module>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Metrix">
+                <param name="android-package" value="ir.metrix.sdk.MetrixCordova"/>
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/MetrixCordova.java" target-dir="src/ir/metrix/sdk" />
+        <source-file src="src/android/MetrixCordovaUtils.java" target-dir="src/ir/metrix/sdk" />
+
+        <framework src="ir.metrix:metrix:0.15.0" />
+        <framework src="com.google.firebase:firebase-messaging:18.0.0" />
+    </platform>
+</plugin>
