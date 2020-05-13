@@ -33,6 +33,5 @@
         <source-file src="src/android/MetrixCordovaUtils.java" target-dir="src/ir/metrix/sdk" />
 
         <framework src="ir.metrix:metrix:0.15.0" />
-        <framework src="com.google.firebase:firebase-messaging:18.0.0" />
     </platform>
 </plugin>
