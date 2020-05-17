@@ -285,7 +285,7 @@ public class MetrixCordova extends CordovaPlugin {
         String slug = args.getString(0);
         String attributesJson = args.getString(1);
         Map<String, String> attributes = jsonObjectToStringMap(new JSONObject(attributesJson));
-        Metrix.getInstance().newEvent(slug, attributes, null);
+        Metrix.getInstance().newEvent(slug, attributes);
     }
 
     private void addUserAttributes(final JSONArray args) throws JSONException {
