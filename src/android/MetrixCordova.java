@@ -75,6 +75,8 @@ public class MetrixCordova extends CordovaPlugin {
         String info4 = null;
         boolean shouldLaunchDeeplink = false;
         String firebaseAppId = null;
+        String firebaseProjectId = null;
+        String firebaseApiKey = null;
         boolean isLocationListeningEnable = false;
         String eventUploadThreshold = null;
         String eventUploadMaxBatchSize = null;
@@ -110,8 +112,10 @@ public class MetrixCordova extends CordovaPlugin {
             isLocationListeningEnable = config.get(KEY_LOCATION_LISTENING_ENABLED).toString() == "true" ? true : false;
         }
 
-        if (config.containsKey(KEY_FIREBASE_ADD_ID)) {
+        if (config.containsKey(KEY_FIREBASE_ADD_ID) && config.containsKey(KEY_FIREBASE_API_KEY) && config.containsKey(KEY_FIREBASE_PROJECT_ID)) {
             firebaseAppId = config.get(KEY_FIREBASE_ADD_ID).toString();
+            firebaseProjectId = config.get(KEY_FIREBASE_PROJECT_ID).toString();
+            firebaseApiKey = config.get(KEY_FIREBASE_API_KEY).toString();
         }
         
         if (config.containsKey(KEY_EVENT_UPLOAD_THRESHOLD)) {
@@ -149,8 +153,8 @@ public class MetrixCordova extends CordovaPlugin {
 
         this.shouldLaunchDeeplink = shouldLaunchDeeplink;
 
-        if (isFieldValid(firebaseAppId)) {
-            metrixConfig.setFirebaseAppId(firebaseAppId);
+        if (isFieldValid(firebaseAppId) && isFieldValid(firebaseProjectId) && isFieldValid(firebaseApiKey)) {
+            metrixConfig.setFirebaseId(firebaseAppId, firebaseProjectId, firebaseApiKey);
         }
 
         // Default tracker.

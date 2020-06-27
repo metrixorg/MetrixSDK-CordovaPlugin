@@ -13,6 +13,8 @@ public class MetrixCordovaUtils {
     public static final String KEY_DEFAULT_TRACKER_TOKEN = "defaultTrackerToken";
     public static final String KEY_SHOULD_LAUNCH_DEEPLINK = "shouldLaunchDeeplink";
     public static final String KEY_FIREBASE_ADD_ID = "firebaseAppId";
+    public static final String KEY_FIREBASE_PROJECT_ID = "firebaseProjectId";
+    public static final String KEY_FIREBASE_API_KEY = "firebaseApiKey";
     public static final String KEY_SECRET_ID = "secretId";
     public static final String KEY_INFO_1 = "info1";
     public static final String KEY_INFO_2 = "info2";

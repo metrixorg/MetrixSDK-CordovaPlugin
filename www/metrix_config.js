@@ -11,6 +11,8 @@ function MetrixConfig(appId) {
     this.attributionChangeListener = null;
     this.deeplinkResponseListener = null;
     this.firebaseAppId = null;
+    this.firebaseProjectId = null;
+    this.firebaseApiKey = null;
     this.isLocationListeningEnable = false;
     this.eventUploadThreshold = null;
     this.eventUploadMaxBatchSize = null;
@@ -26,8 +28,10 @@ MetrixConfig.prototype.setDefaultTracker = function(defaultTrackerToken) {
     this.defaultTrackerToken = defaultTrackerToken;
 };
 
-MetrixConfig.prototype.setFirebaseAppId = function(firebaseAppId) {
+MetrixConfig.prototype.setFirebaseId = function(firebaseAppId, firebaseProjectId, firebaseApiKey) {
     this.firebaseAppId = firebaseAppId;
+    this.firebaseProjectId = firebaseProjectId;
+    this.firebaseApiKey = firebaseApiKey;
 };
 
 MetrixConfig.prototype.setAppSecret = function(secretId, info1, info2, info3, info4) {

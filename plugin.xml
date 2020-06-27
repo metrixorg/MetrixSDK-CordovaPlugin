@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="ir.metrix.sdk" version="0.1.3" >
+    id="ir.metrix.sdk" version="0.2.0" >
     <name>Metrix</name>
     <description>Metrix SDK plugin for Cordova</description>
     <author>Metrix</author>
@@ -32,6 +32,6 @@
         <source-file src="src/android/MetrixCordova.java" target-dir="src/ir/metrix/sdk" />
         <source-file src="src/android/MetrixCordovaUtils.java" target-dir="src/ir/metrix/sdk" />
 
-        <framework src="ir.metrix:metrix:0.15.0" />
+        <framework src="ir.metrix:metrix:0.15.4" />
     </platform>
 </plugin>
