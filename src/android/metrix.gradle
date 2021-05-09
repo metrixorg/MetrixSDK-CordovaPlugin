@@ -1,0 +1,7 @@
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'ir.metrix:metrix:0.15.5'
+}
